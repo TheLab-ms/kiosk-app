@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  app:
+    image: ghcr.io/thelab-ms/kiosk-app:main
+    ports:
+      - '8080:8080'
+
+  browser:
+    image: bh.cr/balenalabs/browser-amd64
+    privileged: true
+    network_mode: host
+    environment:
+      - KIOSK=1
+      - SHOW_CURSOR=0
+      - ENABLE_GPU=0
+      - SIZE=1920x1080
+    depends_on:
+      - app
