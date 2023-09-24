@@ -43,6 +43,11 @@ ENV NODE_ENV production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
+# We need some special access to balenaOS 
+ENV UDEV=1
+RUN echo 'SUBSYSTEM=="backlight", KERNEL=="intel_backlight", GROUP="video", MODE="0666"' > /etc/udev/rules.d/99-backlight.rules
+RUN usermod -a -G video nextjs
+
 COPY --from=builder /app/public ./public
 
 # Automatically leverage output traces to reduce image size
