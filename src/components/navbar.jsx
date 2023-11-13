@@ -7,7 +7,8 @@ export default function App() {
     <Navbar isBordered isBlurred={false}>
       <NavbarBrand>
         {/* <AcmeLogo /> */}
-        <p className="font-bold text-inherit">TheLab.ms</p>
+        <p className="font-bold text-inherit">TheLab.ms MAKERSPACE</p>
+
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
