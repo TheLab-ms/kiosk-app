@@ -5,6 +5,7 @@ import styles from '@/styles/AboutUs.module.css'
 function AboutUsComponent() {
 	
 	return (
+		
 		<div className={styles.auDivStyle}>
 		  <header className={styles.headerStyle}>
 			<img
@@ -45,16 +46,24 @@ function AboutUsComponent() {
 				  </h2>
 				  <div className={styles.sectiondiv8}>
 					<div className={styles.sectiondiv9}>
-					  <div className={styles.sectiondiv10}/>
+					<img
+						loading="lazy"
+						src="https://cdn.builder.io/api/v1/image/assets/TEMP/30af869a-6595-4122-82cf-14e0ba39784e?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
+						className={styles.ifimage2}
+					  />
 					</div>
 					<div className={styles.sectiondiv11}>
-					  <div className={styles.sectiondiv12}/>
+					<img
+						loading="lazy"
+						src="https://cdn.builder.io/api/v1/image/assets/TEMP/30af869a-6595-4122-82cf-14e0ba39784e?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
+						className={styles.ifimage2}
+					  />
 					</div>
 					<div className={styles.sectiondiv13}>
 					  <img
 						loading="lazy"
 						src="https://cdn.builder.io/api/v1/image/assets/TEMP/30af869a-6595-4122-82cf-14e0ba39784e?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
-						className={styles.ifimage}
+						className={styles.ifimage2}
 					  />
 					</div>
 				  </div>
@@ -64,7 +73,7 @@ function AboutUsComponent() {
 		  </section>
 		  <footer className={styles.footer}>
 			<div className={styles.footertext}>
-			  <a href="#" className={styles.footertext2}>
+			  <a className={styles.footertext2}>
 				Go Back
 			  </a>
 			</div>

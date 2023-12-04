@@ -1,7 +1,7 @@
 //import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import Button from './Button';
-import AboutUsComponent from './unsigned';
+import AboutUsComponent from './AboutUs';
 import Box from './box';
 import { NextUIProvider } from '@nextui-org/react';
 
