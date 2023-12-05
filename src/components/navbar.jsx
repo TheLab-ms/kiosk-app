@@ -32,8 +32,8 @@ export default function App() {
           <Link href="#">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Out
+          <Button as={Link} color="primary" href="/unsigned_user" variant="flat">
+            Sign In
           </Button>
         </NavbarItem>
       </NavbarContent>
