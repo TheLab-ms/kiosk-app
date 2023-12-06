@@ -81,11 +81,19 @@ jobs:
       #   # This step uses the identity token to provision an ephemeral certificate
       #   # against the sigstore community Fulcio instance.
       #   run: echo "${{ steps.meta.outputs.tags }}" | xargs -I {} cosign sign {}@${{ steps.build-and-push.outputs.digest }}
-      - name: Deploy to Balena
-        uses: balena-io/deploy-to-balena-action@master
-        id: build
+      # - name: Deploy to Balena
+      #   uses: balena-io/deploy-to-balena-action@master
+      #   id: build
+      #   with:
+      #     balena_token: ${{ secrets.BALENA_TOKEN }}
+      #     fleet: ${{ secrets.BALENA_FLEET }}
+      - name: Balena Deploy
+        uses: Theia-Scientific/balena-cli@latest
+        if: success()
         with:
-          balena_token: ${{ secrets.BALENA_TOKEN }}
-          fleet: ${{ secrets.BALENA_FLEET }}
+          balena_api_token: ${{secrets.BALENA_TOKEN}}
+          balena_command: "push ${{secrets.BALENA_FLEET}} --logs"
+          balena_url: balena-staging.com
+
       - name: Log release ID built
         run: echo "Built release ID ${{ steps.build.outputs.release_id }}"
