@@ -3,8 +3,6 @@ import styles from '@/styles/ticket.module.css';
 import Head from 'next/head';
 import { Button } from '@nextui-org/react';
 
-//<aside></aside>
-
 export default function ticket() {
 	return (
 		<>

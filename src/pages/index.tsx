@@ -1,10 +1,5 @@
 import React from "react";
 import { Button } from "@nextui-org/react";
-//import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
-
-// import styles from '@/styles/Home.module.css';
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from "@nextui-org/react";
-import Image from 'next/image';
 import DefaultLayout from "@/layouts/default";
 
 export default function App() {
