@@ -88,7 +88,7 @@ jobs:
       #     balena_token: ${{ secrets.BALENA_TOKEN }}
       #     fleet: ${{ secrets.BALENA_FLEET }}
       - name: Balena Deploy
-        uses: Theia-Scientific/balena-cli@latest
+        uses: Theia-Scientific/balena-cli@v17
         if: success()
         with:
           balena_api_token: ${{secrets.BALENA_TOKEN}}
