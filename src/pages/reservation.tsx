@@ -3,7 +3,7 @@ import styles from '@/styles/reservation.module.css';
 import Head from 'next/head';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { Button, Card } from '@nextui-org/react';
+import { Button } from '@nextui-org/react';
 
 export default function ReservationCalendar() {
 	const events = [
@@ -24,38 +24,12 @@ export default function ReservationCalendar() {
 				<div className={styles.black_box}>
 					<div className={styles.title}>Events Calendar</div>
 					<div className={styles.inner_left}>
-						<div
-							style={{
-								flex: 1,
-								justifyContent: 'center',
-								alignItems: 'center',
-								padding: '10px',
-								float: 'left',
-								backgroundColor: '#fff',
-								marginLeft: '130px',
-							}}
-						>
-							<Card
-								style={{
-									float: 'left',
-									padding: '13px',
-									width: '400px',
-									height: '350px',
-								}}
-							>
-								<div
-									style={{
-										flex: 1,
-										justifyContent: 'center',
-										alignItems: 'center',
-										padding: '10px',
-									}}
-								>
-									<Calendar />
-								</div>
-							</Card>
+						<div>
+							<div>
+								<Calendar className={styles.calender} />
+							</div>
 
-							<Button className={`${styles.reservation_button} ${styles.text}`}>
+							<Button className={styles.reservation_button}>
 								<p>
 									Need a Tour?
 									<br />
@@ -84,9 +58,7 @@ export default function ReservationCalendar() {
 					</div>
 				</div>
 				<div className={styles.bottom_box}>
-					<Button className={`${styles.button_back} ${styles.button_text}`}>
-						Go Back
-					</Button>
+					<Button className={styles.button_back}>Go Back</Button>
 				</div>
 			</main>
 		</>
