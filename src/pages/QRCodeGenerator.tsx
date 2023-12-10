@@ -1,4 +1,4 @@
-/*'use client'
+'use client'
 import { useEffect } from 'react';
 import QRCode from 'qrcode-generator';
 
@@ -6,8 +6,12 @@ interface QRCodeGeneratorProps {
     url: string; // Explicitly specify the type as string
   }
 
-const QRCodeGenerator = ({ url }) => {
+const QRCodeGenerator = ({ url }: QRCodeGeneratorProps) => {
   useEffect(() => {
+    let qrContainer = document.getElementById('qrcode-container');
+    if (!qrContainer){
+      return;
+    } 
     if (url) {
       // Generate QR code based on the provided URL
       const qr = QRCode(0, 'H');
@@ -16,9 +20,9 @@ const QRCodeGenerator = ({ url }) => {
       const qrCodeImage = qr.createImgTag(5, 0);
 
       // Display the QR code image
-      document.getElementById('qrcode-container').innerHTML = qrCodeImage;
+      qrContainer.innerHTML = qrCodeImage;
     } else {
-        document.getElementById('qrcode-container').innerHTML = '<Image src="/LabMSQRCode.svg" alt="Green Circle" width="200" height="200"/>';
+        qrContainer.innerHTML = '<Image src="/LabMSQRCode.svg" alt="Green Circle" width="200" height="200"/>';
     }
 
   }, [url]);
@@ -26,4 +30,4 @@ const QRCodeGenerator = ({ url }) => {
   return <div id="qrcode-container"></div>;
 };
 
-export default QRCodeGenerator;*/
+export default QRCodeGenerator;
