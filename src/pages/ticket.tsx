@@ -1,33 +1,7 @@
-// import React from 'react';
-// import styles from '@/styles/ticket.module.css';
-// import Head from 'next/head';
-// import { Button } from '@nextui-org/react';
-
-// export default function ticket() {
-// 	return (
-// 		<>
-// 			<Head>
-// 				<title>Support Ticket</title>
-// 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-// 			</Head>
-
-// 			<main className={styles.main}>
-// 				<div className={styles.black_box}>
-// 					<input name="reason"></input>
-// 				</div>
-// 				<div className={styles.bottom_box}>
-// 					<Button className={`${styles.button_back} ${styles.button_text}`}>
-// 						Go Back
-// 					</Button>
-// 				</div>
-// 			</main>
-// 		</>
-// 	);
-// }
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '@/styles/ticket.module.css';
-import Head from 'next/head';
-import { Button, Select, SelectItem } from '@nextui-org/react';
+import { Button, Input, Select, SelectItem, Spacer, Textarea } from '@nextui-org/react';
+import DefaultLayout from '@/layouts/default';
 
 export const reasons = [
 	{
@@ -59,44 +33,56 @@ export const reasons = [
 		label: 'Accessibility Support',
 		value: ' Accessibility Support',
 		description: '',
-	},
-	{
-		label: '...',
-		value: '...',
-		description: '',
-	},
+	}
 ];
 
 export default function SupportTicket() {
+	const [reason, setReason] = useState('');
+	const [message, setMessage] = useState('');
+
+	const handleSubmit = (event: { preventDefault: () => void; }) => {
+		event.preventDefault();
+		// Handle the form submission logic here
+		console.log({ reason, message });
+	};
+
 	return (
-		<>
-			<Head>
-				<title>Support Ticket Page</title>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
+		<DefaultLayout>
 
-			<main className={styles.main}>
-				<div className={styles.black_box}>
-					<h1 className={styles.header1}>Need Assistance</h1>
-					<p className={styles.paragraph}>
-						Please select an issue you are having; we will happily assist.
-					</p>
+			<h1 className={styles.bigText}>Create Support Ticket</h1>
+			<form onSubmit={handleSubmit}>
+				<Select label="Select a reason" className={styles.bigSelect}>
+					{reasons.map((reasons) => (
+						<SelectItem key={reasons.value} className={styles.bigText}>{reasons.label}</SelectItem>
+					))}
+				</Select>
 
-					<div className={styles.dropdown}>
-						<Select label="Select a reason">
-							{reasons.map((reasons) => (
-								<SelectItem key={reasons.value}>{reasons.label}</SelectItem>
-							))}
-						</Select>
-					</div>
+				<Spacer y={3} />
 
-					<Button className={styles.button_submit}>Submit</Button>
-				</div>
+				<Input
+					type="text"
+					label="Your Name"
+					placeholder="Discord Handle, First and Last Name, or Email Address"
+					onChange={(e) => setMessage(e.target.value)}
+					required={false}
+					className={styles.bigText}
+				/>
 
-				<div className={styles.bottom_box}>
-					<Button className={styles.button_back}>Go Back</Button>
-				</div>
-			</main>
-		</>
+				<Spacer y={3} />
+				<Textarea
+					type="text"
+					label="Your Message"
+					placeholder="Describe your issue or question"
+					onChange={(e) => setMessage(e.target.value)}
+					required={false}
+					className={styles.bigText}
+				/>
+
+				<Spacer y={3} />
+
+				<Button type="submit" className={styles.bigButton}>Submit Ticket</Button>
+			</form>
+
+		</DefaultLayout >
 	);
 }
