@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import { useRouter } from 'next/router';
 import DefaultLayout from '@/layouts/default';
+import MenuCard from '@/components/MenuCard';
 
 export default function App() {
     const router = useRouter();
@@ -49,58 +49,18 @@ export default function App() {
             onPress: () => router.push('/test'),
         },
     ];
+
+
     return (
         <DefaultLayout>
-            <div className="w-full flex flex-grow gap-4  p-5">
+            <div className="w-full flex flex-wrap gap-4 p-5">
                 {list1.map((item, index) => (
-                    <Card
-                        className=""
-                        shadow="sm"
-                        key={index}
-                        isPressable
-                        onPress={item.onPress}
-                    >
-                        <CardBody className="overflow-visible p-0">
-                            <Image
-                                shadow="sm"
-                                radius="lg"
-                                //  width={270}
-                                alt={item.title}
-                                className="w-full object-cover h-[140px]"
-                                src={item.img}
-                            //src="/images/3D printer.jpg"
-                            />
-                        </CardBody>
-                        <CardFooter className="text-small justify-between">
-                            <b>{item.title}</b>
-                            {/* <p className="text-default-500">{item.price}</p> */}
-                        </CardFooter>
-                    </Card>
+                    <MenuCard item={item} key={index} />
                 ))}
             </div>
-            <div className=" w-full flex flex-grow gap-4  p-5">
+            <div className="w-full flex flex-wrap gap-4 p-5">
                 {list2.map((item, index) => (
-                    <Card
-                        className=""
-                        shadow="sm"
-                        key={index}
-                        isPressable
-                        onPress={item.onPress}
-                    >
-                        <CardBody className="overflow-visible p-0">
-                            <Image
-                                shadow="sm"
-                                radius="lg"
-                                alt={item.title}
-                                className="w-full object-cover h-[140px]"
-                                src={item.img}
-                            />
-                        </CardBody>
-                        <CardFooter className="text-small justify-between">
-                            <b>{item.title}</b>
-                            {/* <p className="text-default-500">{item.price}</p> */}
-                        </CardFooter>
-                    </Card>
+                    <MenuCard item={item} key={index} />
                 ))}
             </div>
         </DefaultLayout>

@@ -4,8 +4,11 @@ import Head from 'next/head';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Button, Card } from '@nextui-org/react';
+import { useRouter } from 'next/router';
+import DefaultLayout from '@/layouts/default';
 
 export default function ReservationCalendar() {
+	const router = useRouter();
 	const events = [
 		{ id: 1, title: 'Event 1', description: 'Description for Event 1' },
 		{ id: 2, title: 'Event 2', description: 'Description for Event 2' },
@@ -14,81 +17,69 @@ export default function ReservationCalendar() {
 	];
 
 	return (
-		<>
-			<Head>
-				<title>Reservation Page</title>
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-			</Head>
-
-			<main className={styles.main}>
-				<div className={styles.black_box}>
-					<div className={styles.title}>Events Calendar</div>
-					<div className={styles.inner_left}>
-						<div
+		<DefaultLayout>
+			<div className={styles.black_box}>
+				<div className={styles.title}>Events Calendar</div>
+				<div className={styles.inner_left}>
+					<div
+						style={{
+							flex: 1,
+							justifyContent: 'center',
+							alignItems: 'center',
+							padding: '10px',
+							float: 'left',
+							backgroundColor: '#fff',
+							marginLeft: '130px',
+						}}
+					>
+						<Card
 							style={{
-								flex: 1,
-								justifyContent: 'center',
-								alignItems: 'center',
-								padding: '10px',
 								float: 'left',
-								backgroundColor: '#fff',
-								marginLeft: '130px',
+								padding: '13px',
+								width: '400px',
+								height: '350px',
 							}}
 						>
-							<Card
+							<div
 								style={{
-									float: 'left',
-									padding: '13px',
-									width: '400px',
-									height: '350px',
+									flex: 1,
+									justifyContent: 'center',
+									alignItems: 'center',
+									padding: '10px',
 								}}
 							>
-								<div
-									style={{
-										flex: 1,
-										justifyContent: 'center',
-										alignItems: 'center',
-										padding: '10px',
-									}}
-								>
-									<Calendar />
-								</div>
-							</Card>
-
-							<Button className={`${styles.reservation_button} ${styles.text}`}>
-								<p>
-									Need a Tour?
-									<br />
-									Click Here
-								</p>
-							</Button>
-						</div>
-					</div>
-
-					<div className={styles.inner_right}>
-						{events.length > 0 ? (
-							events.map((event) => (
-								<Button
-									key={event.id}
-									className={styles.events_container}
-									color="primary"
-								>
-									{event.title}
-								</Button>
-							))
-						) : (
-							<div className={styles.events_container}>
-								No events available. Coming Soon!!
+								<Calendar />
 							</div>
-						)}
+						</Card>
+
+						<Button className={`${styles.reservation_button} ${styles.text}`}>
+							<p>
+								Need a Tour?
+								<br />
+								Click Here
+							</p>
+						</Button>
 					</div>
 				</div>
-				<div className={styles.bottom_box}>
-					<Button className={`${styles.button_back} ${styles.button_text}`}>
-						Go Back
-					</Button>
+
+				<div className={styles.inner_right}>
+					{events.length > 0 ? (
+						events.map((event) => (
+							<Button
+								key={event.id}
+								className={styles.events_container}
+								color="primary"
+							>
+								{event.title}
+							</Button>
+						))
+					) : (
+						<div className={styles.events_container}>
+							No events available. Coming Soon!!
+						</div>
+					)}
 				</div>
-			</main>
-		</>
+			</div>
+		</DefaultLayout>
 	);
 }
