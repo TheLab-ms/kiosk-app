@@ -9,7 +9,7 @@ export default function App() {
         {
             title: "ABOUT US",
             img: "/images/about.jpg",
-            onPress: () => router.push('/about_us'),
+            onPress: () => router.push('/AboutUs'),
         },
         {
             title: "EVENTS",
