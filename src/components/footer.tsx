@@ -12,7 +12,7 @@ const buttons = [
     },
     {
         title: "Member Already?",
-        url: "/"
+        url: "/sign_in"
     },
     {
         title: "Need Help?",
