@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from '@/styles/ticket.module.css';
 import { Button, Input, Select, SelectItem, Spacer, Textarea } from '@nextui-org/react';
 import DefaultLayout from '@/layouts/default';
-
+import { useSession } from 'next-auth/react';
 export const reasons = [
 	{
 		label: 'Issue With Machine',
@@ -37,6 +37,7 @@ export const reasons = [
 ];
 
 export default function SupportTicket() {
+	const session = useSession();
 	const [reason, setReason] = useState('');
 	const [message, setMessage] = useState('');
 
@@ -66,6 +67,7 @@ export default function SupportTicket() {
 					onChange={(e) => setMessage(e.target.value)}
 					required={false}
 					className={styles.bigText}
+					hidden={!session}
 				/>
 
 				<Spacer y={3} />
