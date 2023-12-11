@@ -3,84 +3,82 @@ import * as React from 'react';
 import styles from '@/styles/AboutUs.module.css'
 
 function AboutUsComponent() {
-	
 	return (
-		
 		<div className={styles.auDivStyle}>
-		  <header className={styles.headerStyle}>
-			<img
-			  loading="lazy"
-			  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
-			  className={styles.auimage}
-			/>
-			<h1 className={styles.autext}>
-			  About Us
-			</h1>
-		  </header>
-		  <section className={styles.section}>
-			<div className={styles.sectiondiv1}>
-			  <div className={styles.sectiondiv2}>
-				<div className={styles.sectiondiv3}>
-				  <h2 className={styles.sectiondiv3h}>
-					Interest Form
-				  </h2>
-				  <img
+			<header className={styles.headerStyle}>
+				<img
 					loading="lazy"
-					src="https://cdn.builder.io/api/v1/image/assets/TEMP/5da2ee75-36f6-4139-9570-28e1ae72977d?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
-					className={styles.ifimage}
-				  />
-				  <img
-					loading="lazy"
-					src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bca0478-3ec0-47bb-b63e-8fc898103aaa?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
-					className={styles.ifimage1}
-				  />
+					srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/bb1105d1-0ae5-4dbd-8fb7-5d1c5d251b37?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
+					className={styles.auimage}
+				/>
+				<h1 className={styles.autext}>
+					About Us
+				</h1>
+			</header>
+			<section className={styles.section}>
+				<div className={styles.sectiondiv1}>
+					<div className={styles.sectiondiv2}>
+						<div className={styles.sectiondiv3}>
+							<h2 className={styles.sectiondiv3h}>
+								Interest Form
+							</h2>
+							<img
+								loading="lazy"
+								src="https://cdn.builder.io/api/v1/image/assets/TEMP/5da2ee75-36f6-4139-9570-28e1ae72977d?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
+								className={styles.ifimage}
+							/>
+							<img
+								loading="lazy"
+								src="https://cdn.builder.io/api/v1/image/assets/TEMP/0bca0478-3ec0-47bb-b63e-8fc898103aaa?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
+								className={styles.ifimage1}
+							/>
+						</div>
+					</div>
+					<div className={styles.sectiondiv4}>
+						<div className={styles.sectiondiv5} />
+					</div>
+					<div className={styles.sectiondiv6}>
+						<div className={styles.sectiondiv7}>
+							<h2 className={styles.sectiondiv7h}>
+								Contact Information
+							</h2>
+							<div className={styles.sectiondiv8}>
+								<div className={styles.sectiondiv9}>
+									<img
+										loading="lazy"
+										src="https://cdn.builder.io/api/v1/image/assets/TEMP/30af869a-6595-4122-82cf-14e0ba39784e?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
+										className={styles.ifimage2}
+									/>
+								</div>
+								<div className={styles.sectiondiv11}>
+									<img
+										loading="lazy"
+										src="https://cdn.builder.io/api/v1/image/assets/TEMP/30af869a-6595-4122-82cf-14e0ba39784e?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
+										className={styles.ifimage2}
+									/>
+								</div>
+								<div className={styles.sectiondiv13}>
+									<img
+										loading="lazy"
+										src="https://cdn.builder.io/api/v1/image/assets/TEMP/30af869a-6595-4122-82cf-14e0ba39784e?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
+										className={styles.ifimage2}
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			  </div>
-			  <div className={styles.sectiondiv4}>
-				<div className={styles.sectiondiv5}/>
-			  </div>
-			  <div className={styles.sectiondiv6}>
-				<div className={styles.sectiondiv7}>
-				  <h2 className={styles.sectiondiv7h}>
-					Contact Information
-				  </h2>
-				  <div className={styles.sectiondiv8}>
-					<div className={styles.sectiondiv9}>
-					<img
-						loading="lazy"
-						src="https://cdn.builder.io/api/v1/image/assets/TEMP/30af869a-6595-4122-82cf-14e0ba39784e?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
-						className={styles.ifimage2}
-					  />
-					</div>
-					<div className={styles.sectiondiv11}>
-					<img
-						loading="lazy"
-						src="https://cdn.builder.io/api/v1/image/assets/TEMP/30af869a-6595-4122-82cf-14e0ba39784e?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
-						className={styles.ifimage2}
-					  />
-					</div>
-					<div className={styles.sectiondiv13}>
-					  <img
-						loading="lazy"
-						src="https://cdn.builder.io/api/v1/image/assets/TEMP/30af869a-6595-4122-82cf-14e0ba39784e?apiKey=b7bb950c491b4bddbd4de63fccd5e47e&"
-						className={styles.ifimage2}
-					  />
-					</div>
-				  </div>
+			</section>
+			<footer className={styles.footer}>
+				<div className={styles.footertext}>
+					<a className={styles.footertext2}>
+						Go Back
+					</a>
 				</div>
-			  </div>
-			</div>
-		  </section>
-		  <footer className={styles.footer}>
-			<div className={styles.footertext}>
-			  <a className={styles.footertext2}>
-				Go Back
-			  </a>
-			</div>
-		  </footer>
+			</footer>
 		</div>
-	  );
-	
+	);
+
 
 	// return (
 	// 	<main className="mix-blend-lighten backdrop-blur-[50px] flex flex-col">
@@ -155,7 +153,7 @@ function AboutUsComponent() {
 	// 	</main>
 	//   );
 
-	
+
 }
 
 export default AboutUsComponent;

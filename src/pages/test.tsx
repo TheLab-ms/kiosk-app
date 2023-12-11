@@ -47,48 +47,7 @@ export default function App() {
         title: "REQUEST A TOUR",
         img: "/images/tour.jpg",
         onPress: () => router.push('/tour'),
-    }]
-    // return (
-    //     <DefaultLayout>
-    //         <div className="w-full flex flex-grow gap-4  p-5">
-    //             {list1.map((item, index) => (
-    //                 <Card className="" shadow="sm" key={index} isPressable onPress={item.onPress}>
-    //                     <CardBody className="overflow-visible p-0">
-    //                         <Image
-    //                             shadow="sm"
-    //                             radius="lg"
-    //                             //  width={270}
-    //                             alt={item.title}
-    //                             className="w-full object-cover h-[140px]"
-    //                             src={item.img}
-    //                         />
-    //                     </CardBody>
-    //                     <CardFooter className="text-small justify-between">
-    //                         <b>{item.title}</b>
-    //                     </CardFooter>
-    //                 </Card>
-    //             ))}
-    //         </div>
-    //         <div className=" w-full flex flex-grow gap-4  p-5">
-    //             {list2.map((item, index) => (
-    //                 <Card className="" shadow="sm" key={index} isPressable onPress={item.onPress}>
-    //                     <CardBody className="overflow-visible p-0">
-    //                         <Image
-    //                             shadow="sm"
-    //                             radius="lg"
-    //                             alt={item.title}
-    //                             className="w-full object-cover h-[140px]"
-    //                             src={item.img}
-    //                         />
-    //                     </CardBody>
-    //                     <CardFooter className="text-small justify-between">
-    //                         <b>{item.title}</b>
-    //                     </CardFooter>
-    //                 </Card>
-    //             ))}
-    //         </div>
-    //     </DefaultLayout >
-    // );
+    }];
 
     return (
         <DefaultLayout>
