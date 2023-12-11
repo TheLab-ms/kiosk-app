@@ -20,6 +20,7 @@ function validateEmail(email: string){
 }
 
 const signInPage = () => {
+    
 
     let url: string = "https://nextjs.org/docs/app/building-your-application/rendering/client-components";
 
@@ -34,10 +35,10 @@ const signInPage = () => {
         validate();
     }, [email, password]);
 
-    async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-        alert(`${process.env.NEXT_PUBLIC_NEXTAUTH_URL}`);
-        e.preventDefault();
-        let res = await signIn("credentials", {
+    async function handleSubmit() {
+        // alert(`${process.env.NEXT_PUBLIC_NEXTAUTH_URL}`);
+
+        let res = await signIn("keycloak", {
         email,
         password,
         callbackUrl: `${process.env.NEXT_PUBLIC_NEXTAUTH_URL}`,
@@ -78,15 +79,20 @@ const signInPage = () => {
             <CardHeader>
             <h1 style={{fontSize: 1.6 + 'rem', fontWeight: 'bold'}}>Sign in</h1>
             </CardHeader>
-            <CardBody>
-                <form onSubmit={handleSubmit}>
+            <CardBody className='flex flex-col'>
+                <div style={{marginTop: '10%'}}>
+                    <Button id='login-in-btn' onClick={handleSubmit} className='w-full' style={{height: 7.5 + 'vh', fontSize: 1.6 + 'rem'}}>Log In Manually</Button> 
+                    <Link href={"/forgot_password"} className='text-xs underline text-center mx-auto block' style={{marginTop: 2 + 'vh'}}>Forgot your password?</Link>
+                </div>
+                
+                {/* <form onSubmit={handleSubmit}>
                     <h4>Email</h4>
                     <Input type="email" label="Email" />
                     <h4>Password</h4>
                     <Input type="password" label="Password" /><br/>
-                    <Input type="submit" className='w-full mb-2' value="Log In"/>
+                    <Input type="submit" className='w-full mb-2' style={{height: 25 + 'vw', fontSize: 1.6 + 'rem'}} value="Log In"/>
                     <Link href={"/forgot_password"} className='text-xs underline text-center mx-auto block'>Forgot your password?</Link>
-                </form>
+                </form> */}
             </CardBody>
             <hr/>
             <CardFooter className='flex flex-col flex-grow justify-center'>
